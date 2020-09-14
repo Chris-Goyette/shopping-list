@@ -18,13 +18,23 @@ $(function(){
         </div>
       </li>`
 
-        // append new list item to ul
+        // Appends New List Item to ul
         $('.shopping-list').append(newListItem);
-        // clear form input after submit 
+
+        // Clears Form Input After Clicking Add Item Button
         $('#shopping-list-entry').val('');
     });
 
-    $('.shopping-item-toggle').on('click', function(){
-        $('.shopping-item').addClass('shopping-item__checked');
+    // Check and Uncheck List Items When Clicking the Check Button.
+    $('.shopping-item-toggle').on('click', function(event){
+        $(this).closest('span').toggleClass('shopping-item__checked');
     });
+
+    // Delete List Items After Clicking the Delete Button
+    $('.shopping-item-delete').on('click', function(event){
+        $(this).remove('li'); 
+    });
+    
+
+
 });
