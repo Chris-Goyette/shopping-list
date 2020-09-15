@@ -25,16 +25,13 @@ $(function(){
         $('#shopping-list-entry').val('');
     });
 
-    // Check and Uncheck List Items When Clicking the Check Button.
-    $('.shopping-item-toggle').on('click', function(event){
-        $(this).closest('span').toggleClass('shopping-item__checked');
+    //Check and Uncheck List Items When Clicking the Check Button.
+    $('.shopping-list').on('click','.shopping-item-toggle', function(event){
+        $(this).closest('li').toggleClass('shopping-item__checked');
     });
 
     // Delete List Items After Clicking the Delete Button
-    $('.shopping-item-delete').on('click', function(event){
-        $(this).remove('li'); 
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event){
+        $(this).closest('li').remove(); 
     });
-    
-
-
 });
