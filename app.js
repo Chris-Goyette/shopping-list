@@ -27,7 +27,7 @@ $(function(){
 
     //Check and Uncheck List Items When Clicking the Check Button.
     $('.shopping-list').on('click','.shopping-item-toggle', function(event){
-        $(this).closest('li').toggleClass('shopping-item__checked');
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
 
     // Delete List Items After Clicking the Delete Button
